@@ -20,7 +20,6 @@ class DataInitializer(
 ) {
     @PostConstruct
     fun initializeData() {
-        println("스프링이 실행되었습니다. 테스트 데이터를 초기화합니다.")
 
         val achievements = mutableSetOf<Achievement>(
             Achievement(
