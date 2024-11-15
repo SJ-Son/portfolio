@@ -1,0 +1,6 @@
+package com.sungjun.portfolio.domain.repository
+
+import com.sungjun.portfolio.domain.entity.Experience
+import org.springframework.data.jpa.repository.JpaRepository
+
+interface ExperienceRepository : JpaRepository<Experience, Long>
