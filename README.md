@@ -1,3 +1,5 @@
+https://sonsungjun.notion.site/13474fdb1c6a8004a4aec8a533535c71?pvs=4
+
 ## 개발환경
 1. IDE: IntelliJ IDEA Community
 2. Gradle - Kotlin
