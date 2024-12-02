@@ -1,19 +1,18 @@
 package com.sungjun.portfolio.presentation.service
 
-import com.sungjun.portfolio.domain.repository.ProjectRepository
 import com.sungjun.portfolio.presentation.dto.IntroductionDTO
 import com.sungjun.portfolio.presentation.dto.LinkDTO
 import com.sungjun.portfolio.presentation.dto.ProjectDTO
 import com.sungjun.portfolio.presentation.dto.ResumeDTO
 import com.sungjun.portfolio.presentation.repository.PresentationRepository
-
 import org.springframework.stereotype.Service
 import org.springframework.transaction.annotation.Transactional
 
 @Service
 class PresentationService(
     private val presentationRepository: PresentationRepository,
-    private val projectRepository: ProjectRepository
+//    private val projectRepository: ProjectRepository
+
 ) {
     @Transactional(readOnly = true)
     fun getIntroductions(): List<IntroductionDTO> {
