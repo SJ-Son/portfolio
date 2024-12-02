@@ -2,7 +2,7 @@ package com.sungjun.portfolio.presentation.dto
 
 import com.sungjun.portfolio.domain.entity.Link
 
-data class LinkDTO(
+class LinkDTO(
     val name: String,
     val content: String
 ) {
