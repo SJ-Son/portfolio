@@ -87,8 +87,8 @@ class DataInitializer(
 
         val java = Skill(name = "java", type = SkillType.LANGUAGE.name, isActive = true)
         val kotlin = Skill(name = "kotlin", type = SkillType.LANGUAGE.name, isActive = true)
-        val spring = Skill(name = "spring", type = SkillType.LANGUAGE.name, isActive = true)
-        val mysql = Skill(name = "mysql", type = SkillType.LANGUAGE.name, isActive = true)
+        val spring = Skill(name = "spring", type = SkillType.FRAMEWORK.name, isActive = true)
+        val mysql = Skill(name = "mysql", type = SkillType.DATABASE.name, isActive = true)
         skillRepository.saveAll(mutableListOf(java, kotlin, spring, mysql))
 
         val project1 = Project(
