@@ -7,6 +7,8 @@ class AdminInterceptorConfiguration(
     val adminInterceptor: AdminInterceptor
 ) : WebMvcConfigurer {
     override fun addInterceptors(registry: InterceptorRegistry) {
-        // super.addInterceptors(registry)
+        registry.addInterceptor(adminInterceptor)
+            .addPathPatterns("/admin/**")
+            .excludePathPatterns("/assets/**", "/css/**", "/js/**", "h2**")
     }
 }
