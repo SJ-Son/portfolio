@@ -43,7 +43,15 @@ class Experience(
         return "${endYear}.${endMonth}"
     }
 
-    fun update(title: String, description: String, startYear: Int, startMonth: Int, endYear: Int) {
+    fun update(
+        title: String,
+        description: String,
+        startYear: Int,
+        startMonth: Int,
+        endYear: Int?,
+        endMonth: Int?,
+        isActive: Boolean
+    ) {
         this.title = title
         this.description = description
         this.startYear = startYear
