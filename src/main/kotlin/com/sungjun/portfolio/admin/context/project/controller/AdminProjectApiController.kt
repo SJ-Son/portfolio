@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.*
 class AdminProjectApiController(
     private val adminProjectService: AdminProjectService
 ) {
+    @PostMapping
     fun postProject(@RequestBody @Validated form: ProjectForm): ResponseEntity<Any> {
         adminProjectService.save(form)
 
