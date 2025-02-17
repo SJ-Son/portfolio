@@ -24,7 +24,7 @@ class AdminApiControllerAdvice {
         log.info(e.message, e)
 
         val fieldErrors = e.bindingResult.fieldErrors[0]
-        val message = "[${fieldErrors.field} ${fieldErrors.defaultMessage}]"
+        val message = "[${fieldErrors.field}] ${fieldErrors.defaultMessage}"
 
         return ResponseEntity.badRequest().body(message)
     }
