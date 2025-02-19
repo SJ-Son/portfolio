@@ -12,7 +12,6 @@
         </li><!-- End Dashboard Nav -->
 
         <li class="nav-heading">Pages</li>
-
         <li class="nav-item" th:each="menu : ${menus}">
             <a class="nav-link collapsed" data-bs-target="#tables-nav" data-bs-toggle="collapse" href="#"
                th:attr="data-bs-target='#'+${#strings.toLowerCase(menu.name)}+'-nav'">
