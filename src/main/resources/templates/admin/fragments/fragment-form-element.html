@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+<th:block th:fragment="formElement(formElement)">
+    <div class="form-floating" th:if="${formElement.type == 'text'}">
+        <input class="form-control" id="floatingName" placeholder="Your Name" th:id="${formElement.name}"
+               th:name="${formElement.name}" th:placeholder="${formElement.name}" th:type="${formElement.type}"
+               type="text">
+        <label for="floatingName" th:for="${formElement.name}" th:text="${formElement.name}">Your Name</label>
+    </div>
+    <div class="form-floating" th:if="${formElement.type == 'date'}">
+        <input class="form-control" id="floatingName" placeholder="Your Name" th:id="${formElement.name}"
+               th:name="${formElement.name}" th:placeholder="${formElement.name}" th:type="${formElement.type}"
+               type="text">
+        <label for="floatingName" th:for="${formElement.name}" th:text="${formElement.name}">Your Name</label>
+    </div>
+    <div class="form-floating" th:if="${formElement.type == 'select'}">
+        <select aria-label="State" class="form-select" id="floatingSelect"
+                th:attr="aria-label=${formElement.name}" th:id="${formElement.name}" th:name="${formElement.name}">
+            <option disabled selected th:text="${formElement.name}" value> -- select an option --</option>
+            <option th:each="option : ${formElement.options}" th:text="${option}" th:value="${option}" value="1">
+                Oregon
+            </option>
+        </select>
+        <label for="floatingSelect" th:for="${formElement.name}" th:text="${formElement.name}">State</label>
+    </div>
+</th:block>
+</body>
+</html>

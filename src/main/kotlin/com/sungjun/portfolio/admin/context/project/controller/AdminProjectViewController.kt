@@ -32,7 +32,7 @@ class AdminProjectViewController(
             TextFormElementDTO("url", 6),
             SelectFormElementDTO("isActive", 2, listOf(true.toString(), false.toString())),
         )
-        model.addAttribute("detailFormElements", formElements)
+        model.addAttribute("detailFormElements", detailFormElements)
 
         val table = adminProjectService.getProjectTable()
         model.addAttribute("table", table)

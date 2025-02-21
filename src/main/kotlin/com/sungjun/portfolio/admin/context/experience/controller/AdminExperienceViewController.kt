@@ -31,7 +31,7 @@ class AdminExperienceViewController(
             TextFormElementDTO("content", 10),
             SelectFormElementDTO("isActive", 2, listOf(true.toString(), false.toString())),
         )
-        model.addAttribute("detailFormElements", formElements)
+        model.addAttribute("detailFormElements", detailFormElements)
 
         val table = adminExperienceService.getExperienceTable()
         model.addAttribute("table", table)
